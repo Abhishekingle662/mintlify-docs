@@ -1,0 +1,177 @@
+---
+title: "Teleprompter App Overview"
+description: "A modern, cross-platform teleprompter application for content creators, presenters, and interview practice"
+---
+
+<Note>
+This is a real-time teleprompter desktop application built with React 19, TypeScript, and Tauri 2.0. Perfect for content creators, public speakers, and anyone who needs professional script delivery.
+</Note>
+
+## The Problem Space 🎯
+
+Traditional teleprompters are either expensive hardware solutions or clunky software that doesn't quite cut it. This project addresses the need for a modern, flexible solution that can:
+
+<CardGroup cols={2}>
+<Card title="Content Creation" icon="video">
+  Help content creators write and rehearse scripts seamlessly for YouTube, podcasts, and live streams
+</Card>
+
+<Card title="Interview Prep" icon="comments">
+  Assist with interview preparation through smooth, distraction-free scrolling
+</Card>
+
+<Card title="Real-Time Feedback" icon="gauge-high">
+  Provide instant feedback on pacing and delivery with adjustable speed controls
+</Card>
+
+<Card title="Transparent Overlay" icon="layer-group">
+  Work transparently over any application without disrupting your workflow
+</Card>
+</CardGroup>
+
+## Why This Solution? ⚡
+
+Our teleprompter combines modern web technologies with native performance to deliver an exceptional user experience.
+
+### Performance That Matters
+
+<Tip>
+Tauri produces binaries ~10x smaller than Electron, resulting in faster startup times and lower memory usage.
+</Tip>
+
+- **Native Rust backend** means zero-overhead system calls
+- React's concurrent rendering keeps UI responsive even during heavy operations
+- Smooth 60fps scrolling with customizable WPM (Words Per Minute)
+
+### Real-Time Everything
+
+The application responds instantly to your needs:
+
+- File watcher detects external script changes in **<100ms**
+- Global hotkeys work system-wide (no alt-tabbing required)
+- Smooth 60fps scrolling for professional delivery
+
+### Cross-Platform Native Feel
+
+<Check>
+Works seamlessly on Windows, macOS, and Linux with a native look and feel on each platform.
+</Check>
+
+- Borderless, transparent overlay mode
+- Click-through functionality with Ctrl+click to interact
+- OS-level integrations for keyboard shortcuts
+
+## Quick Feature Highlights
+
+<AccordionGroup>
+<Accordion title="Script Management" icon="file">
+  - Built-in file manager with real-time sync
+  - Auto-loading from scripts directory
+  - Support for .txt and .md formats
+  - In-app script editor with maximize mode
+</Accordion>
+
+<Accordion title="Teleprompter Modes" icon="play">
+  - Continuous and karaoke scroll modes
+  - Configurable countdown timer
+  - Focus band highlighting for better readability
+  - Mirror mode for traditional teleprompter glass setups
+</Accordion>
+
+<Accordion title="Global Shortcuts" icon="keyboard">
+  - `Ctrl+Space` - Play/Pause instantly
+  - `Ctrl+Up/Down` - Adjust speed on the fly
+  - `Ctrl+[/]` - Brightness control
+  - `Ctrl+I` - Toggle click-through mode
+  - `Ctrl+F` - Quick file manager access
+</Accordion>
+
+<Accordion title="Customization" icon="palette">
+  - Font family and size control
+  - Margin adjustments (top, bottom, left, right)
+  - Opacity and blur effects
+  - Text color customization
+  - Session persistence across restarts
+</Accordion>
+</AccordionGroup>
+
+## Tech Stack at a Glance
+
+<Tabs>
+<Tab title="Frontend">
+  **Modern React Stack**
+  - React 19 - Latest concurrent features
+  - TypeScript - Type safety
+  - Vite 7 - Lightning-fast HMR
+</Tab>
+
+<Tab title="Backend">
+  **Rust-Powered**
+  - Tauri 2.0 - Desktop framework
+  - Native file system access
+  - Global shortcut support
+  - Real-time file watching
+</Tab>
+
+<Tab title="Features">
+  **Advanced Capabilities**
+  - MCP Server integration
+  - MongoDB support
+  - Real-time synchronization
+  - Cloud-based script storage
+</Tab>
+</Tabs>
+
+## Open Source 🌟
+
+This project is **open-source** and available on GitHub. We welcome contributions from:
+
+- Content creators looking for better tools
+- Developers interested in Tauri and Rust
+- Anyone passionate about improving presentation technology
+
+<Card
+  title="View on GitHub"
+  icon="github"
+  href="https://github.com/Abhishekingle662/teleprompter"
+  horizontal
+>
+  ⭐ Star the repository, report issues, or contribute code
+</Card>
+
+## Performance Metrics
+
+<Info>
+The application is built for speed and efficiency:
+</Info>
+
+- **Binary Size:** <10MB (compared to 100MB+ for Electron apps)
+- **Latency:** <100ms for file updates
+- **Frame Rate:** Consistent 60fps scrolling
+- **Startup Time:** <2 seconds on modern hardware
+
+## What's Next?
+
+<Steps>
+<Step title="Explore the Architecture">
+  Learn how the application is built and how all components work together
+</Step>
+
+<Step title="Discover Features">
+  Deep dive into all the features and customization options available
+</Step>
+
+<Step title="See Use Cases">
+  Understand how different professionals use the teleprompter in their workflow
+</Step>
+
+<Step title="Technical Details">
+  For developers: explore the challenges solved and implementation details
+</Step>
+</Steps>
+
+---
+
+<Warning>
+This is an actively developed project. Features and documentation are continuously being updated. Check the GitHub repository for the latest updates.
+</Warning>

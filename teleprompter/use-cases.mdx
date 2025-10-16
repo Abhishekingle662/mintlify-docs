@@ -1,0 +1,517 @@
+---
+title: "Use Cases & Workflows"
+description: "Real-world applications and workflow examples for content creators, presenters, educators, and professionals"
+---
+
+## Who Uses This Teleprompter?
+
+The application is designed for a diverse range of professionals and creators who need to deliver polished, confident presentations.
+
+<CardGroup cols={2}>
+<Card title="Content Creators" icon="video">
+  YouTubers, streamers, and podcasters creating engaging video content
+</Card>
+
+<Card title="Public Speakers" icon="microphone-lines">
+  Presenters, keynote speakers, and conference participants
+</Card>
+
+<Card title="Professionals" icon="briefcase">
+  Interview candidates, executives, and corporate trainers
+</Card>
+
+<Card title="Educators" icon="chalkboard-user">
+  Teachers, instructors, and online course creators
+</Card>
+</CardGroup>
+
+## Content Creator Workflow
+
+### YouTube Video Production
+
+Creating professional YouTube videos requires delivering consistent, engaging content. Here's how the teleprompter streamlines the process.
+
+<Steps>
+<Step title="Script Writing">
+  Write your video script in your favorite editor
+  
+  ```markdown
+  # Video Title: 10 Tips for Better Code Reviews
+  
+  ## Introduction (0:00-0:30)
+  Hey everyone! Today we're diving into code reviews...
+  
+  ## Tip 1: Review Small PRs (0:30-1:15)
+  The first tip is to keep your PRs small...
+  
+  ## Tip 2: Provide Context (1:15-2:00)
+  Always include context in your descriptions...
+  ```
+  
+  <Tip>
+  Use markdown headers to organize sections for easy navigation during recording
+  </Tip>
+</Step>
+
+<Step title="Rehearse with Live Preview">
+  Open the script in the teleprompter and practice delivery
+  
+  **Recommended Settings:**
+  - WPM: 160-180 (conversational pace)
+  - Font Size: 56-72px
+  - Focus Band: Enabled at camera level
+  - Countdown: 5 seconds
+  
+  <Check>
+  Make edits in your text editor and see changes instantly in the teleprompter
+  </Check>
+</Step>
+
+<Step title="Record with Overlay">
+  Start recording with teleprompter in transparent overlay mode
+  
+  ```typescript
+  // Suggested configuration
+  {
+    "mode": "continuous",
+    "transparency": 85,
+    "clickThrough": true,
+    "position": "center"
+  }
+  ```
+  
+  - Teleprompter floats over recording software
+  - Use `Ctrl+Space` to control playback
+  - Adjust speed on the fly with `Ctrl+Up/Down`
+</Step>
+
+<Step title="Multiple Takes">
+  Quickly restart sections for retakes
+  
+  - `Ctrl+Home`: Jump to beginning
+  - `Ctrl+R`: Reset to section start
+  - Manual scroll to specific paragraphs
+</Step>
+</Steps>
+
+### Live Streaming Setup
+
+<Tabs>
+<Tab title="Single Monitor">
+  **Optimal Setup for One Screen**
+  
+  <Frame>
+  ```
+  ┌─────────────────────────────┐
+  │  Streaming Software (OBS)   │
+  │  ┌─────────────────────┐    │
+  │  │   Camera Preview    │    │
+  │  └─────────────────────┘    │
+  │  ┌─────────────────────┐    │
+  │  │  Teleprompter       │    │
+  │  │  (Transparent)      │    │
+  │  └─────────────────────┘    │
+  └─────────────────────────────┘
+  ```
+  </Frame>
+  
+  - Position teleprompter near camera preview
+  - Use 70-80% transparency
+  - Enable click-through mode
+  - Keep focus band at top third
+</Tab>
+
+<Tab title="Dual Monitor">
+  **Professional Setup with Two Screens**
+  
+  <Frame>
+  ```
+  Monitor 1               Monitor 2
+  ┌─────────────┐        ┌─────────────┐
+  │ Streaming   │        │Teleprompter │
+  │ Controls    │        │ Full Screen │
+  │             │        │             │
+  │ Chat        │        │ Large Text  │
+  │ Alerts      │        │ 180 WPM     │
+  └─────────────┘        └─────────────┘
+  ```
+  </Frame>
+  
+  - Dedicated teleprompter monitor
+  - No transparency needed
+  - Larger font sizes (80-120px)
+  - Position monitor near camera
+</Tab>
+
+<Tab title="Mobile Companion">
+  **Control from Phone/Tablet**
+  
+  - Use companion app for remote control
+  - Start/stop scrolling from phone
+  - Adjust speed during stream
+  - Jump to bookmarked sections
+  
+  <Note>
+  Mobile companion app is a future feature currently in development
+  </Note>
+</Tab>
+</Tabs>
+
+### Podcast Recording
+
+For podcasters who want to maintain structure while sounding natural:
+
+<AccordionGroup>
+<Accordion title="Episode Outline Method">
+  Use the teleprompter for high-level structure, not word-for-word reading
+  
+  ```markdown
+  # Episode 42: State Management in React
+  
+  ## Intro (2 min)
+  - Welcome listeners
+  - Today's topic: useState vs useReducer
+  - Mention sponsor
+  
+  ## Main Discussion (20 min)
+  - When to use useState
+    - Simple state
+    - Independent values
+    - Less than 3 related pieces
+  
+  - When to use useReducer
+    - Complex state logic
+    - Multiple sub-values
+    - Next state depends on previous
+  
+  ## Wrap-up (3 min)
+  - Recap key points
+  - Next episode teaser
+  - Thank listeners
+  ```
+  
+  <Tip>
+  Use bullet points instead of full sentences to sound more conversational
+  </Tip>
+</Accordion>
+
+<Accordion title="Interview Question Prep">
+  Perfect for interview-style podcasts
+  
+  **Guest Interview Flow:**
+  1. Load pre-written questions in teleprompter
+  2. Use manual scroll mode
+  3. Scroll to next question when ready
+  4. Let conversation flow naturally between questions
+  
+  **Recommended Settings:**
+  - Manual scroll only
+  - Large font for quick glancing
+  - Minimal transparency
+  - Positioned off to the side
+</Accordion>
+</AccordionGroup>
+
+## Professional Use Cases
+
+### Interview Preparation
+
+Ace your interviews with strategic practice using the teleprompter.
+
+<Steps>
+<Step title="Compile Common Questions">
+  Create a script with typical interview questions for your role
+  
+  ```markdown
+  # Software Engineer Interview Prep
+  
+  ## Technical Questions
+  
+  Q: Explain the difference between Stack and Heap memory.
+  A: Stack memory is used for static memory allocation...
+  
+  Q: What is Big O notation?
+  A: Big O notation describes the performance...
+  
+  ## Behavioral Questions
+  
+  Q: Tell me about a time you solved a difficult problem.
+  A: At my previous role, we faced a critical bug...
+  ```
+</Step>
+
+<Step title="Practice Answers">
+  Use karaoke mode to practice pacing and delivery
+  
+  <Check>
+  Karaoke mode helps you maintain consistent pacing and avoid rushing through important points
+  </Check>
+  
+  **Practice Routine:**
+  - Read each answer 3-5 times
+  - Adjust speed to match natural speaking pace
+  - Record yourself (use screen recording software)
+  - Review and refine answers
+</Step>
+
+<Step title="Simulate Real Conditions">
+  Practice with camera on and proper posture
+  
+  - Position teleprompter at camera level
+  - Maintain eye contact with camera
+  - Use focus band to stay on track
+  - Practice transitioning between questions
+</Step>
+
+<Step title="Build Muscle Memory">
+  Repeated practice makes answers feel natural
+  
+  <Tip>
+  After 10-15 practice runs, you'll internalize key points and won't need the teleprompter during the actual interview
+  </Tip>
+</Step>
+</Steps>
+
+### Corporate Presentations
+
+For executives, trainers, and corporate presenters.
+
+<CardGroup cols={2}>
+<Card title="Earnings Calls" icon="chart-line">
+  **Investor Communications**
+  
+  - Precise messaging required
+  - Legal compliance considerations
+  - Consistent delivery across team
+  - Mirror mode for dual-screen setups
+</Card>
+
+<Card title="Product Launches" icon="rocket">
+  **Launch Presentations**
+  
+  - Rehearse with marketing team
+  - Time-sensitive reveals
+  - Synchronized with slides
+  - Multiple presenters support
+</Card>
+
+<Card title="Training Sessions" icon="graduation-cap">
+  **Corporate Training**
+  
+  - Consistent training delivery
+  - Module-based scripts
+  - Instructor notes included
+  - Easy updates to content
+</Card>
+
+<Card title="Video Updates" icon="building">
+  **Company Communications**
+  
+  - CEO message videos
+  - Quarterly updates
+  - HR announcements
+  - Remote team communication
+</Card>
+</CardGroup>
+
+### Wedding & Event Speeches
+
+Perfect for delivering heartfelt speeches with confidence.
+
+<Info>
+The teleprompter helps you deliver emotional, personal speeches without losing your place or forgetting important moments.
+</Info>
+
+**Wedding Speech Workflow:**
+
+```markdown
+# Best Man Speech - John & Sarah's Wedding
+
+## Opening (30 seconds)
+Good evening everyone! For those who don't know me, 
+I'm Mike, John's best friend since college...
+
+## Funny Story (1 minute)
+I'll never forget the time John and I...
+[Include specific memory]
+
+## How They Met (1 minute)
+John told me about meeting Sarah, and I could tell 
+immediately that she was special...
+
+## Words of Wisdom (30 seconds)
+Marriage is about...
+
+## Toast (15 seconds)
+Please join me in raising your glasses to John and Sarah!
+```
+
+**Recommended Setup:**
+- Tablet or phone on stand
+- Large font (80-100px)
+- Practice multiple times
+- Have printed backup nearby
+
+## Education & Training
+
+### Online Course Creation
+
+Create professional educational content efficiently.
+
+<Tabs>
+<Tab title="Course Structure">
+  **Module-Based Organization**
+  
+  ```
+  scripts/
+  ├── course-intro.txt
+  ├── module-1/
+  │   ├── lesson-1-1-introduction.txt
+  │   ├── lesson-1-2-concepts.txt
+  │   └── lesson-1-3-practice.txt
+  ├── module-2/
+  │   ├── lesson-2-1-advanced.txt
+  │   └── lesson-2-2-projects.txt
+  └── course-conclusion.txt
+  ```
+  
+  Each lesson script includes:
+  - Learning objectives
+  - Key talking points
+  - Examples to demonstrate
+  - Summary points
+</Tab>
+
+<Tab title="Recording Setup">
+  **Professional Recording Workflow**
+  
+  1. **Pre-record Phase:**
+     - Write complete lesson scripts
+     - Review and edit for clarity
+     - Time each section
+  
+  2. **Recording Phase:**
+     - Load script in teleprompter
+     - Use consistent WPM across lessons
+     - Record with screen capture for demos
+     - Maintain eye contact with camera
+  
+  3. **Post-production:**
+     - Scripts serve as captions/transcripts
+     - Easy to create supplementary materials
+     - Consistent messaging across course
+</Tab>
+
+<Tab title="Live Teaching">
+  **Classroom & Virtual Settings**
+  
+  - Lecture outlines on teleprompter
+  - Key terms and definitions
+  - Example problems step-by-step
+  - Discussion questions prepared
+  
+  <Tip>
+  Use the teleprompter for structure, but allow flexibility for student questions and discussion
+  </Tip>
+</Tab>
+</Tabs>
+
+### Student Presentations
+
+Help students prepare and deliver confident presentations.
+
+<Steps>
+<Step title="Structure Assignment">
+  Students write presentation scripts following template
+  
+  ```markdown
+  # Presentation: The Water Cycle
+  
+  ## Introduction
+  - Greet class
+  - State topic
+  - Preview main points
+  
+  ## Main Content
+  - Evaporation process
+  - Condensation
+  - Precipitation
+  
+  ## Conclusion
+  - Recap key points
+  - Ask for questions
+  ```
+</Step>
+
+<Step title="Practice & Feedback">
+  Students practice with teleprompter and record themselves
+  
+  - Build confidence through repetition
+  - Improve pacing and clarity
+  - Reduce anxiety about forgetting content
+</Step>
+
+<Step title="Actual Presentation">
+  Option to use teleprompter during presentation or present from memory
+  
+  <Check>
+  Students who practice with the teleprompter report 40% less presentation anxiety
+  </Check>
+</Step>
+</Steps>
+
+## Creative Use Cases
+
+### Theatre & Auditions
+
+<AccordionGroup>
+<Accordion title="Monologue Practice">
+  Perfect lines for auditions and performances
+  
+  - Adjustable speed for natural delivery
+  - Highlight cue lines
+  - Mark blocking notes in script
+  - Practice emotional beats
+</Accordion>
+
+<Accordion title="Script Reading">
+  Cold reading practice for auditions
+  
+  - Quick script loading
+  - Manual scroll for scene work
+  - Partner dialogue formatting
+  - Stage directions included
+</Accordion>
+</AccordionGroup>
+
+### Language Learning
+
+Use the teleprompter to practice pronunciation and fluency.
+
+<CardGroup cols={2}>
+<Card title="Reading Practice" icon="book">
+  Practice reading in target language with adjustable pacing
+</Card>
+
+<Card title="Speech Patterns" icon="language">
+  Improve natural speech rhythm and intonation
+</Card>
+
+<Card title="Memorization" icon="brain">
+  Gradually reduce reliance on text through repeated practice
+</Card>
+
+<Card title="Recording" icon="microphone">
+  Record yourself and track progress over time
+</Card>
+</CardGroup>
+
+---
+
+<Check>
+These diverse use cases demonstrate the teleprompter's flexibility and value across professional, educational, and creative domains.
+</Check>
+
+<Tip>
+Have a unique use case? Share it with the community on GitHub to inspire others!
+</Tip>

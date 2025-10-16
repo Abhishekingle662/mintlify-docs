@@ -1,0 +1,456 @@
+---
+title: "Features & Capabilities"
+description: "Comprehensive guide to all features, controls, and customization options in the teleprompter app"
+---
+
+## Feature Overview
+
+The teleprompter app is packed with professional features designed to enhance your presentation and content creation workflow.
+
+<CardGroup cols={2}>
+<Card title="Script Management" icon="folder-open">
+  Powerful file management with real-time synchronization
+</Card>
+
+<Card title="Teleprompter Modes" icon="display">
+  Multiple scroll modes for different presentation styles
+</Card>
+
+<Card title="Global Shortcuts" icon="keyboard">
+  Control everything without leaving your workflow
+</Card>
+
+<Card title="Deep Customization" icon="sliders">
+  Tailor every aspect to match your needs
+</Card>
+</CardGroup>
+
+## Intelligent Script Management
+
+### Built-in File Manager
+
+<Steps>
+<Step title="Automatic Script Discovery">
+  The app automatically scans your scripts directory and loads all compatible files
+  
+  ```bash
+  # Default script locations:
+  # Windows: %APPDATA%/teleprompter/scripts/
+  # macOS: ~/Library/Application Support/teleprompter/scripts/
+  # Linux: ~/.config/teleprompter/scripts/
+  ```
+  
+  <Check>
+  Supports .txt and .md file formats with automatic format detection
+  </Check>
+</Step>
+
+<Step title="Real-Time Synchronization">
+  Any changes made to script files externally are reflected instantly in the app
+  
+  - Edit in VS Code, Notepad, or any text editor
+  - Changes appear in <100ms
+  - No manual refresh needed
+</Step>
+
+<Step title="In-App Script Editor">
+  Edit scripts directly within the teleprompter with a full-featured editor
+  
+  <Tabs>
+  <Tab title="Quick Edit Mode">
+    Edit scripts in a compact panel while previewing changes
+  </Tab>
+  
+  <Tab title="Maximize Mode">
+    Full-screen editing experience with syntax highlighting (for .md files)
+  </Tab>
+  </Tabs>
+</Step>
+</Steps>
+
+### File Manager Features
+
+<AccordionGroup>
+<Accordion title="Script List View" icon="list">
+  - Alphabetically sorted script list
+  - File type indicators (.txt, .md)
+  - Last modified timestamps
+  - Quick preview on hover
+  - Search and filter capabilities
+</Accordion>
+
+<Accordion title="File Operations" icon="file-circle-plus">
+  - **Create new scripts** - Blank template or from clipboard
+  - **Import files** - Drag & drop or file picker
+  - **Rename scripts** - In-place editing
+  - **Delete scripts** - With confirmation dialog
+  - **Duplicate scripts** - Quick copy for variations
+</Accordion>
+
+<Accordion title="Organization Tools" icon="folder-tree">
+  - **Folders/Categories** - Organize scripts by topic or project
+  - **Tags** - Add metadata for easy filtering
+  - **Favorites** - Pin frequently used scripts
+  - **Recent files** - Quick access to recently opened scripts
+</Accordion>
+</AccordionGroup>
+
+## Professional Teleprompter Experience
+
+### Scroll Modes
+
+<Tabs>
+<Tab title="Continuous Scroll">
+  **Smooth, constant scrolling** for natural reading
+  
+  - Adjustable WPM (Words Per Minute)
+  - Consistent pace throughout
+  - Perfect for rehearsed presentations
+  - Recommended for: YouTube videos, presentations, speeches
+  
+  ```typescript
+  // Speed calculation
+  const pixelsPerSecond = (wpm * avgWordLength) / 60;
+  const scrollSpeed = pixelsPerSecond / fps;
+  ```
+</Tab>
+
+<Tab title="Karaoke Mode">
+  **Word-by-word highlighting** for precise pacing
+  
+  - Individual word highlighting
+  - Adjustable highlight duration
+  - Visual pacing cues
+  - Perfect for: Interview prep, precise timing needs
+  
+  <Tip>
+  Karaoke mode helps you maintain consistent pacing and prevents rushing through important points.
+  </Tip>
+</Tab>
+
+<Tab title="Manual Scroll">
+  **Full manual control** with keyboard or mouse
+  
+  - Scroll at your own pace
+  - Pause anywhere
+  - Jump to specific sections
+  - Perfect for: Reference material, Q&A sessions
+</Tab>
+</Tabs>
+
+### Countdown Timer
+
+Start your presentation with confidence using the built-in countdown timer.
+
+<Steps>
+<Step title="Configure Countdown">
+  Set your desired countdown duration (3, 5, 10 seconds, or custom)
+  
+  ```typescript
+  const countdownOptions = [3, 5, 10, 15, 30]; // seconds
+  ```
+</Step>
+
+<Step title="Visual Countdown">
+  Large, clear countdown numbers with optional sound cues
+  
+  - Full-screen display
+  - Color transitions (red → yellow → green)
+  - Optional beep sounds
+</Step>
+
+<Step title="Auto-Start">
+  Scrolling begins automatically when countdown reaches zero
+  
+  <Check>
+  Get into position and ready while the countdown runs
+  </Check>
+</Step>
+</Steps>
+
+### Focus Band
+
+The focus band helps you maintain eye contact with the camera while reading.
+
+<Frame>
+  ```
+  ┌─────────────────────────┐
+  │                         │  ← Dimmed area
+  │  ─────────────────────  │  ← Top of focus band
+  │  HIGHLIGHTED TEXT HERE  │  ← Sharp, clear text
+  │  ─────────────────────  │  ← Bottom of focus band
+  │                         │  ← Dimmed area
+  └─────────────────────────┘
+  ```
+</Frame>
+
+**Customization Options:**
+- Band height (1-5 lines of text)
+- Band position (top, center, bottom)
+- Dimming intensity (0-90%)
+- Band color/highlight effect
+
+<Warning>
+Position the focus band at your camera's eye level for the most natural-looking presentation.
+</Warning>
+
+### Mirror Mode
+
+Essential for professional teleprompter setups with beam-splitter glass.
+
+<Info>
+Mirror mode horizontally flips the text, perfect when using a beam-splitter mirror in front of your camera.
+</Info>
+
+```
+Normal:    "Hello World"
+Mirrored:  "dlroW olleH"
+```
+
+## Workflow-Optimized Controls
+
+### Global Keyboard Shortcuts
+
+Control the teleprompter from anywhere on your system without focusing the app window.
+
+<Tabs>
+<Tab title="Playback Controls">
+  **Primary Controls**
+  
+  | Shortcut | Action | Description |
+  |----------|--------|-------------|
+  | `Ctrl+Space` | Play/Pause | Toggle scrolling |
+  | `Ctrl+R` | Reset | Return to top |
+  | `Ctrl+Up` | Speed Up | Increase WPM by 10 |
+  | `Ctrl+Down` | Slow Down | Decrease WPM by 10 |
+  | `Ctrl+Home` | Jump to Start | Instant top |
+  | `Ctrl+End` | Jump to End | Instant bottom |
+</Tab>
+
+<Tab title="Appearance Controls">
+  **Visual Adjustments**
+  
+  | Shortcut | Action | Description |
+  |----------|--------|-------------|
+  | `Ctrl+[` | Decrease Brightness | Dim text |
+  | `Ctrl+]` | Increase Brightness | Brighten text |
+  | `Ctrl+M` | Toggle Mirror | Flip horizontally |
+  | `Ctrl+B` | Toggle Focus Band | Show/hide band |
+  | `Ctrl+T` | Transparency | Cycle opacity |
+</Tab>
+
+<Tab title="Window Controls">
+  **Window Management**
+  
+  | Shortcut | Action | Description |
+  |----------|--------|-------------|
+  | `Ctrl+I` | Toggle Interact | Click-through mode |
+  | `Ctrl+F` | File Manager | Open file list |
+  | `Ctrl+S` | Settings | Open settings |
+  | `Ctrl+H` | Hide/Show | Toggle visibility |
+  | `Ctrl+Q` | Quit | Close app |
+</Tab>
+</Tabs>
+
+<Tip>
+All shortcuts are customizable in the settings panel. Create your own workflow!
+</Tip>
+
+### Click-Through Mode
+
+Work seamlessly with the teleprompter overlay visible but non-interactive.
+
+<Steps>
+<Step title="Enable Click-Through">
+  Press `Ctrl+I` to make the window click-through
+  
+  - Window becomes transparent to mouse clicks
+  - You can interact with apps beneath it
+  - Teleprompter remains visible
+</Step>
+
+<Step title="Temporary Interaction">
+  Hold `Ctrl` and click to interact with teleprompter controls
+  
+  ```typescript
+  // Implementation concept
+  if (event.ctrlKey && event.type === 'click') {
+    enableInteraction();
+    setTimeout(disableInteraction, 5000); // 5s timeout
+  }
+  ```
+</Step>
+
+<Step title="Disable Click-Through">
+  Press `Ctrl+I` again to restore normal window interaction
+</Step>
+</Steps>
+
+## Deep Customization
+
+### Appearance Settings
+
+<AccordionGroup>
+<Accordion title="Typography" icon="font">
+  **Font Customization**
+  
+  - **Font Family:** Choose from system fonts or add custom fonts
+  - **Font Size:** 12px - 200px range
+  - **Font Weight:** Thin to Ultra-bold
+  - **Line Height:** 1.0 - 3.0x spacing
+  - **Letter Spacing:** -5px to +20px
+  
+  <Tip>
+  Recommended: Sans-serif fonts (Arial, Helvetica) at 48-72px for optimal camera readability
+  </Tip>
+</Accordion>
+
+<Accordion title="Layout & Spacing" icon="ruler">
+  **Margin Controls**
+  
+  - **Top Margin:** 0-500px
+  - **Bottom Margin:** 0-500px
+  - **Left Margin:** 0-500px
+  - **Right Margin:** 0-500px
+  - **Text Alignment:** Left, Center, Right, Justify
+  
+  Example configuration:
+  ```json
+  {
+    "margins": {
+      "top": 100,
+      "bottom": 100,
+      "left": 150,
+      "right": 150
+    },
+    "alignment": "center"
+  }
+  ```
+</Accordion>
+
+<Accordion title="Visual Effects" icon="wand-magic-sparkles">
+  **Advanced Visual Options**
+  
+  - **Opacity:** 0-100% window transparency
+  - **Blur Background:** Gaussian blur for desktop beneath
+  - **Text Shadow:** Enhance readability over complex backgrounds
+  - **Text Color:** RGB or HEX color picker
+  - **Background Color:** Optional solid color with opacity
+  
+  <CodeGroup>
+  ```css Light Theme
+  {
+    "textColor": "#1a1a1a",
+    "backgroundColor": "#ffffff",
+    "backgroundOpacity": 0.95
+  }
+  ```
+  
+  ```css Dark Theme
+  {
+    "textColor": "#ffffff",
+    "backgroundColor": "#1a1a1a",
+    "backgroundOpacity": 0.90
+  }
+  ```
+  
+  ```css High Contrast
+  {
+    "textColor": "#ffffff",
+    "backgroundColor": "#000000",
+    "textShadow": "2px 2px 4px rgba(0,0,0,0.8)"
+  }
+  ```
+  </CodeGroup>
+</Accordion>
+</AccordionGroup>
+
+### Behavior Settings
+
+<Tabs>
+<Tab title="Scrolling">
+  **Scroll Behavior Configuration**
+  
+  - Default WPM: 150-300 (adjustable)
+  - Acceleration curve: Linear, Ease-in, Ease-out
+  - Pause duration between sections
+  - Auto-restart on script change
+  - Loop at end option
+</Tab>
+
+<Tab title="Shortcuts">
+  **Keyboard Shortcut Customization**
+  
+  - Remap any global shortcut
+  - Create custom shortcuts
+  - Import/export shortcut profiles
+  - Disable specific shortcuts
+  - Modifier key combinations
+</Tab>
+
+<Tab title="Session">
+  **Session Persistence**
+  
+  - Remember last opened script
+  - Restore scroll position
+  - Save speed preferences
+  - Remember window size/position
+  - Auto-load on startup
+</Tab>
+</Tabs>
+
+### Preset Management
+
+Save and load complete configuration presets for different scenarios.
+
+<CardGroup cols={2}>
+<Card title="YouTube Recording" icon="youtube">
+  - 180 WPM speed
+  - Center-aligned, 64px font
+  - Focus band enabled
+  - 5-second countdown
+</Card>
+
+<Card title="Live Presentation" icon="presentation-screen">
+  - 150 WPM speed
+  - Large margins for stage setup
+  - No countdown
+  - Mirror mode enabled
+</Card>
+
+<Card title="Interview Practice" icon="microphone">
+  - Karaoke mode
+  - 120 WPM pace
+  - Manual scroll enabled
+  - No auto-loop
+</Card>
+
+<Card title="Quick Reference" icon="book-open">
+  - Manual scroll only
+  - Compact layout
+  - Minimal margins
+  - High transparency
+</Card>
+</CardGroup>
+
+```typescript
+// Save preset
+const preset = {
+  name: "YouTube Recording",
+  settings: {
+    wpm: 180,
+    fontSize: 64,
+    focusBand: true,
+    countdown: 5,
+    alignment: "center"
+  }
+};
+
+await invoke('save_preset', { preset });
+```
+
+---
+
+<Check>
+With these features and customization options, the teleprompter adapts to any workflow or presentation style.
+</Check>

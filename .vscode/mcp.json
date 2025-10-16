@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"mintlify_mcp": {
+			"url": "https://projectkeystone.mintlify.app/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}

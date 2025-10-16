@@ -18,7 +18,8 @@
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "development",
+              "mcp-integration"
             ]
           },
           {
@@ -63,6 +64,31 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Teleprompter Project",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "teleprompter/overview"
+            ]
+          },
+          {
+            "group": "Technical Documentation",
+            "pages": [
+              "teleprompter/architecture",
+              "teleprompter/features",
+              "teleprompter/technical-challenges"
+            ]
+          },
+          {
+            "group": "Practical Guides",
+            "pages": [
+              "teleprompter/use-cases"
             ]
           }
         ]

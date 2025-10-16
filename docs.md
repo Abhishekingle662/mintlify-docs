@@ -37,7 +37,7 @@ Traditional teleprompters are either expensive hardware solutions or clunky soft
 - React's concurrent rendering keeps UI responsive even during heavy operations
 
 **2. Real-Time Everything**
-- File watcher detects external script changes in <100ms
+- File watcher detects external script changes in &lt;100ms
 - Global hotkeys work system-wide (no alt-tabbing required)
 - Smooth 60fps scrolling with customizable WPM (Words Per Minute)
 
@@ -106,7 +106,7 @@ Traditional teleprompters are either expensive hardware solutions or clunky soft
 2. **Rust file watcher** detects change via OS event
 3. **Event emitted** to frontend via Tauri's event system
 4. **React state updates** trigger re-render
-5. **UI refreshes** in <100ms - user sees changes instantly
+5. **UI refreshes** in &lt;100ms - user sees changes instantly
 
 ## Use Cases That Inspired Development 💡
 
@@ -201,6 +201,6 @@ Drop a comment below with:
 - Frontend: React 19 + TypeScript + Vite 7
 - Backend: Rust + Tauri 2.0
 - Features: Real-time file watching, global shortcuts, transparent overlays
-- Performance: <10MB binary, <100ms latency, 60fps scrolling
+- Performance: &lt;10MB binary, &lt;100ms latency, 60fps scrolling
 
 #SoftwareDevelopment #Rust #React #Tauri #OpenSource #ContentCreation #TechStack #DesktopApps #WebDevelopment #TypeScript #RealTime #Developer #Programming #TechInnovation
